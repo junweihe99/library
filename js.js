@@ -50,7 +50,7 @@ for(let i=0; i <myLibrary.length; i++)
     let page = document.createElement("div");
     page.textContent = `Pages: ${myLibrary[i].page} pages`;
     let read = document.createElement("button");
-    read.classList.add("read");
+    read.classList.add("notread");
     read.textContent = "Not yet read";
 
     book.appendChild(title);
@@ -59,3 +59,18 @@ for(let i=0; i <myLibrary.length; i++)
     book.appendChild(read);
     library.appendChild(book);
 }
+
+const toggle = document.querySelectorAll(".notread");
+toggle.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button.classList.contains("notread"))
+        {
+            button.classList.replace("notread", "read");
+            button.textContent = "Read";
+        }
+        else{
+            button.classList.replace("read", "notread");
+            button.textContent = "Not yet read";
+        }
+    });
+});

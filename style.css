@@ -39,7 +39,7 @@ button{
 
 .book{
     border: 1px solid;
-    box-shadow: 0 0 5px red;
+    box-shadow: 0 0 5px blue;
     display: grid;
     grid-template-rows: repeat(4,1fr);
     align-items: center;
@@ -47,5 +47,13 @@ button{
 }
 
 .read{
+    background: lightgreen;
+}
+
+.notread{
     background: lightcoral;
+}
+
+button:hover{
+    box-shadow: 0 0 5px 5px lightblue;
 }
